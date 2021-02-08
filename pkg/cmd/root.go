@@ -31,7 +31,7 @@ var (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "pager",
+	Use:   "pager TITLE DESCRIPTION",
 	Short: "pager sends notifications to a Pager service",
 	Long:  `A simple CLI tool to send notifications to a Pager service`,
 	Args:  cobra.ExactArgs(2),
