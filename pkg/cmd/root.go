@@ -5,9 +5,9 @@ import (
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/go-ozzo/ozzo-validation/v4/is"
 	"github.com/spf13/cobra"
-	"github.com/tuuturu/event-client/pkg/core"
-	"github.com/tuuturu/event-client/pkg/oauth2"
-	"github.com/tuuturu/event-client/pkg/pager"
+	"github.com/tuuturu/pager-cli-client/pkg/core"
+	"github.com/tuuturu/pager-cli-client/pkg/oauth2"
+	"github.com/tuuturu/pager-cli-client/pkg/pager"
 	"github.com/tuuturu/pager-event-service/pkg/core/models"
 	"os"
 )

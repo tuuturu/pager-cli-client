@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/tuuturu/event-client/pkg/cmd"
+	"github.com/tuuturu/pager-cli-client/pkg/cmd"
 )
 
 func main() {

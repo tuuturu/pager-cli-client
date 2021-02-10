@@ -1,4 +1,4 @@
-module github.com/tuuturu/event-client
+module github.com/tuuturu/pager-cli-client
 
 go 1.15
 
