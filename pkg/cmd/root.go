@@ -2,6 +2,8 @@ package cmd
 
 import (
 	"fmt"
+	"os"
+
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/go-ozzo/ozzo-validation/v4/is"
 	"github.com/spf13/cobra"
@@ -9,7 +11,6 @@ import (
 	"github.com/tuuturu/pager-cli-client/pkg/oauth2"
 	"github.com/tuuturu/pager-cli-client/pkg/pager"
 	"github.com/tuuturu/pager-event-service/pkg/core/models"
-	"os"
 )
 
 type Arguments struct {
