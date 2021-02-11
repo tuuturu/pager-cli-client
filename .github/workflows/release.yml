@@ -34,11 +34,11 @@ jobs:
         run: |
           go get -v -t -d ./...
 
-      #- name: Run linter
-      #  run: make lint
+      - name: Run linter
+        run: make lint
 
-      #- name: Run tests
-      #  run: make test
+      - name: Run tests
+        run: make test
 
       - name: Run test build
         run: go build -a -installsuffix cgo -o pager .
