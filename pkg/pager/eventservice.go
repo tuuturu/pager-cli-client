@@ -3,11 +3,11 @@ package pager
 import (
 	"bytes"
 	"encoding/json"
-	"errors"
 	"fmt"
-	"github.com/tuuturu/pager-event-service/pkg/core/models"
 	"net/http"
 	"net/url"
+
+	"github.com/tuuturu/pager-event-service/pkg/core/models"
 )
 
 func CreateEvent(baseURL *url.URL, token string, event models.Event) error {
@@ -15,12 +15,12 @@ func CreateEvent(baseURL *url.URL, token string, event models.Event) error {
 
 	payload, err := json.Marshal(event)
 	if err != nil {
-		return fmt.Errorf("error marshalling payload: %w", err)
+		return fmt.Errorf("marshalling payload: %w", err)
 	}
 
 	request, err := http.NewRequest(http.MethodPost, eventsURL, bytes.NewReader(payload))
 	if err != nil {
-		return fmt.Errorf("error creating event request: %w", err)
+		return fmt.Errorf("creating event request: %w", err)
 	}
 
 	request.Header.Add("Content-Type", "application/json")
@@ -30,11 +30,11 @@ func CreateEvent(baseURL *url.URL, token string, event models.Event) error {
 
 	response, err := client.Do(request)
 	if err != nil {
-		return fmt.Errorf("error posting event: %w", err)
+		return fmt.Errorf("posting event: %w", err)
 	}
 
 	if response.StatusCode != http.StatusCreated {
-		return errors.New(fmt.Sprintf("response returned %d", response.StatusCode))
+		return fmt.Errorf("response returned %d", response.StatusCode)
 	}
 
 	return nil
